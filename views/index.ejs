@@ -6,9 +6,20 @@
   </head>
   <body>
     <h1><%= title %></h1>
-    <button class="enableEthereumButton">Connect to Metamask</button>
-    <h2>Account: <span class="showAccount"></span></h2>
-    <h2>Chain ID: <span class="showChainId"></span></h2>
+      <button class="enableEthereumButton">Connect to Metamask</button>
+      <h2>Account: <span class="showAccount"></span></h2>
+      <h2>Chain ID: <span class="showChainId"></span></h2>
+    <br>
+    <h1>Send ETH using Web App</h1>
+      <form id="sendETH">
+        <h2>Send to:</h2>
+        <input type="text" id="addressTo"/>
+        <h2>Amount in ETH:</h2>
+        <input type="number" id="ETHAmount"/>
+        <br>
+        <button>Send ETH</button>
+      </form>
     <script src="javascripts/index.js"></script>
+    <script src="javascripts/bundle.js"></script>
   </body>
 </html>
