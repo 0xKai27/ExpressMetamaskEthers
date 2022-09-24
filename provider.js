@@ -15,11 +15,11 @@ sendETH.addEventListener('submit', async(e) => {
   // Get the form values
   const addressToValue = addressTo.value;
   const ETHAmountValue = ETHAmount.value;
-  // Calculate amount ot transfer in wei
-  const weiAmountValue = parseInt(ETHAmountValue) * 10**18;
+  // Calculate amount to transfer in wei
+  const weiAmountValue = ethers.utils.parseEther(ETHAmountValue) //parseInt(ETHAmountValue) * 10**18
 
   // Form the transaction request for sending ETH
-  let transactionRequest = {
+  const transactionRequest = {
     to: addressToValue.toString(),
     value: weiAmountValue.toString()
   }
